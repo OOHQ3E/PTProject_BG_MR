@@ -104,8 +104,8 @@ Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
 
 ### 9.1 A tesztelési jegyzőkönyv kitöltésére egy sablon:
 
-**Tesztelő:** Vezetéknév Keresztnév
-**Tesztelési fajta** (Unit teszt, funkcionális teszt)
+* **Tesztelő:** Vezetéknév Keresztnév
+* **Tesztelési fajta** (Unit teszt, funkcionális teszt)
 
 Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 ----------|--------------|---------------|----------|-----------
