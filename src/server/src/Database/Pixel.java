@@ -1,6 +1,14 @@
 package Database;
 
 public class Pixel {
+    public Pixel(int x, int y, int r, int g, int b) {
+        this.setX(x);
+        this.setY(y);
+        this.setR(r);
+        this.setG(g);
+        this.setB(b);
+    }
+
     private int x;
     public int getX() {
         return x;

@@ -115,4 +115,64 @@ public class DBConnection {
         }
         return false;
     }
+
+    public ArrayList<Pixel> GetAllPixels() {
+        ArrayList<Pixel> pixels = new ArrayList<Pixel>();
+        try {
+            System.out.println(connectionString);
+            Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from pixels;");
+            while (rs.next()) {
+                pixels.add(new Pixel(
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getInt(3),
+                        rs.getInt(4),
+                        rs.getInt(5)
+                ));
+            }
+            con.close();
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return pixels;
+    }
+
+    public boolean ResetPixelCanvas(int width) {
+        try {
+            Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
+            Statement stmt = con.createStatement();
+            String query = "truncate pixels";
+            stmt.execute(query);
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < width; y++) {
+                    stmt.execute("insert into pixels (x, y, r, g, b) values (" + x + ", " + y + ", 255, 255, 255)");
+                }
+            }
+            con.close();
+            return true;
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean UpdatePixel(int x, int y, int r, int g, int b) {
+        try {
+            Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
+            Statement stmt = con.createStatement();
+            String query = "update pixels set r = " + r + ", g = " + g + ", b = " + b
+                    + " where x = " + x + " and y = " + y + ";";
+            stmt.execute(query);
+            con.close();
+            return true;
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }

@@ -16,7 +16,7 @@ public class Program {
     private static DBConnection dbConnection;
     public static void main(String[] args) {
         if (loadConfiguration()) {
-            server();
+            dbConnection.UpdatePixel(0,13, 200,200,0);
         }
     }
     private static boolean loadConfiguration() {
