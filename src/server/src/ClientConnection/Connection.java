@@ -1,8 +1,6 @@
-import java.io.BufferedReader;
+package ClientConnection;
+
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Objects;
 
 public class Connection{
@@ -31,7 +29,7 @@ public class Connection{
                 catch (IOException ex) { ex.printStackTrace();}
             }
             System.out.println("Session closed!");
-            System.out.println("Connection closed!");
+            System.out.println("ClientConnection.Connection closed!");
         }
         public void Exiting() {
             connection.Exit();

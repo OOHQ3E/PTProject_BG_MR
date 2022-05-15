@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: Program
+Class-Path: mysql-connector-java-8.0.29.jar
+
