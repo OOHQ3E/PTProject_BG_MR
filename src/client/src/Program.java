@@ -1,5 +1,6 @@
 import Classes.Pixel;
 import Classes.User;
+import loginForm.LoginForm;
 import userWindow.mainwindow;
 
 import java.io.*;
@@ -8,7 +9,7 @@ import java.util.Properties;
 
 public class Program {
     public static void main(String[] args) throws Exception {
-        mainwindow.main(args);
+        LoginForm.main(args);
         if (Config.loadConfiguration()) {
             ServerSession session = new ServerSession(Config.getIp(), Config.getPort());
             Connection connection = new Connection(session);
