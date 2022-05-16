@@ -36,10 +36,8 @@ public class mainwindow extends JFrame{
                 if (o == paintButton){
                     Draw.pixels[(int) nud_Y.getValue()][(int) nud_X.getValue()]
                             = new Color((int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
-                    System.out.println(Draw.pixels[(int) nud_Y.getValue()][(int) nud_X.getValue()]);
-                    System.out.println((int) nud_Y.getValue()+","+(int) nud_X.getValue());
+
                     Draw.paletteRedraw();
-                    //add(draw);
                     repaint();
                 }
                 else if (o == logOutButton){
@@ -55,6 +53,5 @@ public class mainwindow extends JFrame{
     public static void main(String[] args) {
         JFrame frame = new mainwindow();
         frame.setLayout(null);
-
     }
 }

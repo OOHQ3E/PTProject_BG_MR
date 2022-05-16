@@ -22,19 +22,10 @@ public class Draw extends JPanel {
                 }
                 else {
                     blocks[i][j] = new Block(j,i,pixels[i][j]);
-                    //System.out.println(blocks[i][j]);
-                    System.out.println("stepped in else statement " +  pixels[i][j]);
                 }
             }
         }
-        System.out.println("i drew it the canvas " +  pixels[1][1]);
     }
-
-    //public void SwitchState(int x, int y)
-    //{
-   //     pixels[x][y] = !pixels[x][y];
-   // }
-
 
     public void paint(Graphics g){
         super.paint(g);
