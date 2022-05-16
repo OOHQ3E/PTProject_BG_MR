@@ -1,10 +1,9 @@
 package Classes;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class User {
-    public User(String userName, int authLevel) {
-        this.setUserName(userName);
-        this.setAuthLevel(authLevel);
-    }
     public User(int ID, String userName, int authLevel) {
         this.setId(ID);
         this.setUserName(userName);
@@ -38,5 +37,26 @@ public class User {
     @Override
     public String toString() {
         return "User;" + id + ";" + userName + ";" + authLevel;
+    }
+
+    public static User convertStringToUser(String userString) {
+        String[] data = userString.split(";");
+        if (!Objects.equals(data[0], "User")) {
+            return null;
+        }
+        return new User(Integer.parseInt(data[1]), data[2], Integer.parseInt(data[3]));
+    }
+
+    public static ArrayList<User> convertStringToUserList(String userListString) {
+        ArrayList<User> users = new ArrayList<User>();
+        String[] data = userListString.split(":");
+        if (!Objects.equals(data[0], "UserList")) {
+            return null;
+        }
+        int count = data.length;
+        for (int i = 1; i < count - 1; i++) {
+            users.add(convertStringToUser(data[i]));
+        }
+        return users;
     }
 }

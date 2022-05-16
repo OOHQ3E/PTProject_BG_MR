@@ -7,6 +7,7 @@ import Observer.IUpdatable;
 import Observer.Observer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Connection{
@@ -34,13 +35,19 @@ public class Connection{
                         this.Exiting();
                     }
                 }
-                catch (IOException ex) { ex.printStackTrace();}
+                catch (IOException ex) {
+                    ex.printStackTrace();
+                    this.Exiting();
+                }
             }
             connection.observer.RemoveUpdatable(this);
             System.out.println("Session closed!");
         }
         public void Exiting() {
             connection.Exit();
+        }
+        private boolean isAdminLoggedIn() {
+            return connection.currentUser != null && connection.dbConnection.IsAdmin(currentUser.getId());
         }
 
         private void interpret(String s) {
@@ -71,20 +78,52 @@ public class Connection{
                 connection.sendCommand("Message;Logged out!");
             }
             else if (Objects.equals(data[0], "ShowUser")) {
-                User u = connection.dbConnection.GetUser(Integer.parseInt(data[1]));
-                connection.sendCommand("Show"+u);
+                if (isAdminLoggedIn()) {
+                    User u = connection.dbConnection.GetUser(Integer.parseInt(data[1]));
+                    connection.sendCommand("Show" + u);
+                }
+                else {
+                    connection.sendCommand("Error;You must be an admin to use this feature!");
+                }
+            }
+            else if (Objects.equals(data[0], "GetAllUser")) {
+                ArrayList<User> users = connection.dbConnection.GetAllUsers();
+                String messageString = "";
+                int count = users.size();
+                for (int index = 0; index < count - 1; index++) {
+                    messageString += users.get(index).toString() + ":";
+                }
+                if (count > 1) {
+                    messageString += users.get(count - 1);
+                }
+                connection.sendCommand("UserList:" + messageString);
             }
             else if (Objects.equals(data[0], "NewUser")) {
-                connection.dbConnection.AddNewUser(data[1],data[2], Integer.parseInt(data[3]));
-                connection.sendCommand("Message;New user added!");
+                if (isAdminLoggedIn()) {
+                    connection.dbConnection.AddNewUser(data[1], data[2], Integer.parseInt(data[3]));
+                    connection.sendCommand("Message;New user added!");
+                }
+                else {
+                    connection.sendCommand("Error;You must be an admin to use this feature!");
+                }
             }
             else if (Objects.equals(data[0], "DeleteUser")) {
-                connection.dbConnection.DeleteUser(Integer.parseInt(data[1]));
-                connection.sendCommand("Message;User deleted!");
+                if (isAdminLoggedIn()) {
+                    connection.dbConnection.DeleteUser(Integer.parseInt(data[1]));
+                    connection.sendCommand("Message;User deleted!");
+                }
+                else {
+                    connection.sendCommand("Error;You must be an admin to use this feature!");
+                }
             }
             else if (Objects.equals(data[0], "UpdateUser")) {
-                connection.dbConnection.UpdateUser(Integer.parseInt(data[1]), data[2], data[3], Integer.parseInt(data[4]));
-                connection.sendCommand("Message;User updated!");
+                if (isAdminLoggedIn()) {
+                    connection.dbConnection.UpdateUser(Integer.parseInt(data[1]), data[2], data[3], Integer.parseInt(data[4]));
+                    connection.sendCommand("Message;User updated!");
+                }
+                else {
+                    connection.sendCommand("Error;You must be an admin to use this feature!");
+                }
             }
         }
 

@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Objects;
+
 public class Pixel {
     public Pixel(int x, int y, int r, int g, int b) {
         this.setX(x);
@@ -52,6 +54,20 @@ public class Pixel {
     @Override
     public String toString() {
         return "Pixel;" + x + ";" + y + ";" + r + ";" + g + ";" + b;
+    }
+
+    public static Pixel convertStringToPixel(String pixelString) {
+        String[] data = pixelString.split(";");
+        if (!Objects.equals(data[0], "Pixel")) {
+            return null;
+        }
+        return new Pixel(
+                Integer.parseInt(data[1]),
+                Integer.parseInt(data[2]),
+                Integer.parseInt(data[3]),
+                Integer.parseInt(data[4]),
+                Integer.parseInt(data[5])
+        );
     }
 }
 

@@ -27,7 +27,7 @@ public class Connection{
                         this.Exiting();
                     }
                 }
-                catch (IOException ex) { this.setStop(true); }
+                catch (IOException ex) { this.Exiting(); }
             }
             try {
                 session.writeLine("EXIT");
@@ -93,6 +93,9 @@ public class Connection{
     }
     public void sendLogoutRequest() {
         sendCommand("Logout");
+    }
+    public void getAllUsers() {
+        sendCommand("GetAllUser");
     }
     public void sendNewUser(String username, String password, int authLevel) {
         sendCommand("NewUser;"+username+";"+password+";"+authLevel);
