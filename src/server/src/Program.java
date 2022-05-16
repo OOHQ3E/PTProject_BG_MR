@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Objects;
 import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,14 @@ public class Program {
     private static Logger mainLogger = LoggerFactory.getLogger("Main");
     public static void main(String[] args) {
         if (loadConfiguration()) {
+            for (int i = 0; i < args.length; i++) {
+                if (Objects.equals(args[i], "-r") && i + 1 < args.length ) {
+                    int number = Integer.parseInt(args[i+1]);
+                    dbConnection.ResetPixelCanvas(number);
+                    mainLogger.info("Reseted canvas with width " + number);
+                    return;
+                }
+            }
             server();
         }
     }
