@@ -22,7 +22,7 @@ public class DBConnection {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from users;");
             while (rs.next()) {
-                users.add(new User(rs.getString(2), rs.getInt(4)));
+                users.add(new User(rs.getInt(1), rs.getString(2), rs.getInt(4)));
             }
             con.close();
         }
@@ -41,7 +41,7 @@ public class DBConnection {
             ResultSet rs = stmt.executeQuery(query);
 
             if (rs.next()) {
-                user = new User(rs.getString(2), rs.getInt(4));
+                user = new User(rs.getInt(1), rs.getString(2), rs.getInt(4));
             }
             con.close();
         }
@@ -49,6 +49,25 @@ public class DBConnection {
             ex.printStackTrace();
         }
         return user;
+    }
+
+    public boolean IsAdmin(int id) {
+        try {
+            Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
+            Statement stmt = con.createStatement();
+            String query = "select count(*) from users where id="+id+" and auth_level=3;";
+            ResultSet rs = stmt.executeQuery(query);
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                return count > 0;
+            }
+            con.close();
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
     }
 
     public User GetUser(int ID) {

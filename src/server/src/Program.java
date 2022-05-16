@@ -1,7 +1,9 @@
 import ClientConnection.ClientSession;
 import ClientConnection.Connection;
 import Database.DBConnection;
+import Database.Pixel;
 import Database.User;
+import Observer.Observer;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,9 +16,10 @@ import java.util.Properties;
 public class Program {
     private static String port;
     private static DBConnection dbConnection;
+    private static Observer observer = new Observer();
     public static void main(String[] args) {
         if (loadConfiguration()) {
-            dbConnection.UpdatePixel(0,13, 200,200,0);
+            server();
         }
     }
     private static boolean loadConfiguration() {
@@ -51,7 +54,7 @@ public class Program {
                 Socket s = ss.accept();
                 System.out.println("New client!");
 
-                Connection c = new Connection(new ClientSession(s));
+                Connection c = new Connection(new ClientSession(s), observer, dbConnection);
                 c.Start();
             }
         }

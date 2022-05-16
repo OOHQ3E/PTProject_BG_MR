@@ -1,3 +1,6 @@
+import Classes.Pixel;
+import Classes.User;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -23,13 +26,14 @@ public class ServerSession {
         return incoming.readLine();
     }
 
-    public boolean hasNewLine() throws IOException {
-        return incoming.ready();
-    }
     public void writeLine(String value) throws IOException {
         outgoing.println(value);
         outgoing.flush();
     }
+
+
+
+
     public void close() {
         try {
             incoming.close();

@@ -1,6 +1,10 @@
-package Database;
+package Classes;
 
 public class User {
+    public User(String userName, int authLevel) {
+        this.setUserName(userName);
+        this.setAuthLevel(authLevel);
+    }
     public User(int ID, String userName, int authLevel) {
         this.setId(ID);
         this.setUserName(userName);

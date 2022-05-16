@@ -1,4 +1,4 @@
-package Database;
+package Classes;
 
 public class Pixel {
     public Pixel(int x, int y, int r, int g, int b) {
@@ -54,3 +54,4 @@ public class Pixel {
         return "Pixel;" + x + ";" + y + ";" + r + ";" + g + ";" + b;
     }
 }
+

@@ -1,3 +1,5 @@
+import Classes.Pixel;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -6,17 +8,13 @@ public class Program {
     private static String ip;
     public static void main(String[] args) throws Exception {
         loadConfiguration();
-        System.out.println(port);
-        System.out.println(ip);
 
         ServerSession session = new ServerSession(ip, Integer.parseInt(port));
         Connection connection = new Connection(session);
         connection.Start();
-        connection.sendCommand("Command1");
-        connection.sendCommand("Command2");
-
-        connection.sendCommand("Command3");
+        connection.sendLoginRequest("admin", "admin");
         Thread.sleep(5000);
+        connection.sendLogoutRequest();
         connection.Exit();
     }
     private static boolean loadConfiguration()

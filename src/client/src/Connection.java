@@ -1,3 +1,6 @@
+import Classes.Pixel;
+import Classes.User;
+
 import java.io.IOException;
 import java.util.Objects;
 
@@ -76,7 +79,7 @@ public class Connection{
         }
         while (readerThread.isAlive()) {}
     }
-    public void sendCommand(String command) {
+    private void sendCommand(String command) {
         try {
             session.writeLine(command);
         }
@@ -84,6 +87,28 @@ public class Connection{
         {
             exception.printStackTrace();
         }
+    }
+    public void sendLoginRequest(String username, String password) {
+        sendCommand("Login;"+username+";"+password);
+    }
+    public void sendLogoutRequest() {
+        sendCommand("Logout");
+    }
+    public void sendNewUser(String username, String password, int authLevel) {
+        sendCommand("NewUser;"+username+";"+password+";"+authLevel);
+    }
+    public void deleteUser(int id) {
+        sendCommand("DeleteUser;"+id);
+    }
+    public void updateUser(User user) {
+        sendCommand("Update"+user);
+    }
+    public void showUser(int id) {
+        sendCommand("ShowUser;"+id);
+    }
+
+    public void updatePixel(Pixel pixel) {
+        sendCommand(pixel.toString());
     }
     public void Start() {
         System.out.println("Connected and session started!");
