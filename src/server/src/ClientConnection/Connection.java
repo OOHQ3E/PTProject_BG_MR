@@ -5,10 +5,13 @@ import Database.Pixel;
 import Database.User;
 import Observer.IUpdatable;
 import Observer.Observer;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+
+
 
 public class Connection{
     class ReaderThread extends Thread implements IUpdatable {
@@ -29,19 +32,18 @@ public class Connection{
             while (!stop) {
                 try {
                     String line = session.readLine();
-                    System.out.println(line);
                     interpret(line);
                     if (Objects.equals(line, "EXIT")) {
                         this.Exiting();
                     }
                 }
                 catch (IOException ex) {
-                    ex.printStackTrace();
+                    logger.error("Error occurred while reading client input", ex);
                     this.Exiting();
                 }
             }
             connection.observer.RemoveUpdatable(this);
-            System.out.println("Session closed!");
+            logger.info("Session closed");
         }
         public void Exiting() {
             connection.Exit();
@@ -84,19 +86,26 @@ public class Connection{
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");
+                    logger.warn("Non admin user tried to access GetUser");
                 }
             }
             else if (Objects.equals(data[0], "GetAllUser")) {
-                ArrayList<User> users = connection.dbConnection.GetAllUsers();
-                String messageString = "";
-                int count = users.size();
-                for (int index = 0; index < count - 1; index++) {
-                    messageString += users.get(index).toString() + ":";
+                if (isAdminLoggedIn()) {
+                    ArrayList<User> users = connection.dbConnection.GetAllUsers();
+                    String messageString = "";
+                    int count = users.size();
+                    for (int index = 0; index < count - 1; index++) {
+                        messageString += users.get(index).toString() + ":";
+                    }
+                    if (count > 1) {
+                        messageString += users.get(count - 1);
+                    }
+                    connection.sendCommand("UserList:" + messageString);
                 }
-                if (count > 1) {
-                    messageString += users.get(count - 1);
+                else {
+                    connection.sendCommand("Error;You must be an admin to use this feature!");
+                    logger.warn("Non admin user tried to access GetAllUser");
                 }
-                connection.sendCommand("UserList:" + messageString);
             }
             else if (Objects.equals(data[0], "NewUser")) {
                 if (isAdminLoggedIn()) {
@@ -105,6 +114,7 @@ public class Connection{
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");
+                    logger.warn("Non admin user tried to access NewUser");
                 }
             }
             else if (Objects.equals(data[0], "DeleteUser")) {
@@ -114,6 +124,7 @@ public class Connection{
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");
+                    logger.warn("Non admin user tried to access DeleteUser");
                 }
             }
             else if (Objects.equals(data[0], "UpdateUser")) {
@@ -123,6 +134,7 @@ public class Connection{
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");
+                    logger.warn("Non admin user tried to access UpdateUser");
                 }
             }
         }
@@ -138,6 +150,7 @@ public class Connection{
     private Observer observer;
     private DBConnection dbConnection;
     private User currentUser = null;
+    private Logger logger = LoggerFactory.getLogger("Connection");
 
     public Connection(ClientSession session, Observer observer, DBConnection dbConnection) {
         readerThread = new ReaderThread(this);
@@ -159,7 +172,7 @@ public class Connection{
 
     private boolean stop;
     public void Start() {
-        System.out.println("Session started!");
+        logger.info("New session started!");
         readerThread.start();
         observer.AddUpdatable(readerThread);
     }

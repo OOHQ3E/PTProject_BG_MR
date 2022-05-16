@@ -2,13 +2,15 @@
   <artifact name="server executable">
     <output-path>$PROJECT_DIR$/out/artifacts/server_executable</output-path>
     <root id="root">
-      <element id="library" level="project" name="mysql-connector-java-8.0.29" />
+      <element id="file-copy" path="$PROJECT_DIR$/app.config" />
+      <element id="library" level="project" name="libs" />
       <element id="archive" name="server.jar">
         <element id="module-output" name="server" />
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         </element>
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/logback.xml" />
     </root>
   </artifact>
 </component>

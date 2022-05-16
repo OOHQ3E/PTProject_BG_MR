@@ -1,22 +1,21 @@
 import ClientConnection.ClientSession;
 import ClientConnection.Connection;
 import Database.DBConnection;
-import Database.Pixel;
-import Database.User;
 import Observer.Observer;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Program {
     private static String port;
     private static DBConnection dbConnection;
     private static Observer observer = new Observer();
+    private static Logger mainLogger = LoggerFactory.getLogger("Main");
     public static void main(String[] args) {
         if (loadConfiguration()) {
             server();
@@ -49,10 +48,10 @@ public class Program {
     private static void server() {
         try {
             ServerSocket ss = new ServerSocket(Integer.parseInt(port));
-            System.out.println("Server started!");
+            mainLogger.info("Server started");
             while (true) {
                 Socket s = ss.accept();
-                System.out.println("New client!");
+                mainLogger.info("New client connected");
 
                 Connection c = new Connection(new ClientSession(s), observer, dbConnection);
                 c.Start();
