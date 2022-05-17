@@ -38,7 +38,7 @@ public class Draw extends JPanel {
 
     public void paint(Graphics g){
         super.paint(g);
-        g.setColor(Color.white);
+        g.setColor(Color.lightGray);
         g.fillRect(0, 0, getWidth(), getHeight());
         for (int i = 0; i < blocks.length; i++) {
             for (int j = 0; j < blocks[0].length; j++) {
