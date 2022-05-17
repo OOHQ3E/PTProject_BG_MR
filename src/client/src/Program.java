@@ -10,7 +10,6 @@ public class Program {
             Connection connection = new Connection(session);
             connection.Start();
             LoginForm.main(connection);
-            //connection.sendLoginRequest("admin", "admin");
         }
     }
 }
