@@ -35,6 +35,7 @@ public class mainwindow extends JFrame{
 
         setVisible(true);
         setUpButtonListeners();
+        c.getAllPixel();
     }
     public void drawSquare(){
         Draw.paletteRedraw();

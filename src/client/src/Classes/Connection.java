@@ -143,6 +143,7 @@ public class Connection{
         sendCommand("ShowUser;"+id);
     }
 
+    public void getAllPixel() { sendCommand("GetAllPixel"); }
     public void updatePixel(Pixel pixel) {
         sendCommand(pixel.toString());
     }

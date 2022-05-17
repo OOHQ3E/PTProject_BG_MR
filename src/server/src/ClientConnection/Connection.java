@@ -59,6 +59,12 @@ public class Connection{
                 Pixel p = Pixel.convertStringToPixel(s);
                 connection.dbConnection.UpdatePixel(p.getX(), p.getY(), p.getR(), p.getG(), p.getB());
             }
+            else if (Objects.equals(data[0], "GetAllPixel")) {
+                ArrayList<Pixel> pixels = dbConnection.GetAllPixels();
+                for (Pixel p: pixels) {
+                    sendCommand(p.toString());
+                }
+            }
             else if (Objects.equals(data[0], "Login")) {
                 User u = dbConnection.UserExists(data[1], data[2]);
                 connection.currentUser = u;
