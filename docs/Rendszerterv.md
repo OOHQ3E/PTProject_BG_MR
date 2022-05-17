@@ -39,6 +39,7 @@ Mivel Java alkalmazás, ezért ez platform független.
 ## 4. Funkcionális terv
 ### Kliens program
 A program indulásakor a felhasználónak be kell jelentkezni. Sikeres bejelentkezés után előrhetővé válik a vászon.
+Ha a bejelentkezett felhasználó admin, akkor van lehetősége felhasználó kezelő ablakot is megnyitni, ahol új felhasználót tud hozzáadni, módosítani adatot neki, törölni.
 
 ### Szerver program
 A programnak fogadnia kell a kliens általi TCP kapcsolódási kérvényeket. Ezek után ha a kliens oldali felhasználó helyes bejelentkezési adatokat küldd el, akkor a fiókkal kapcsolatus funkciók elérhetővé vállnak. A szerver program egy konzolos alkalmazás.
@@ -51,8 +52,7 @@ Nincsenek vásárolt szoftverkomponensek, egyetemi hallgatói azonosítóval el�
 Linode szerver
 
 ### Fejlesztő eszközök
-IntelliJ Idea, Visual Studio Code
-
+IntelliJ Idea
 
 ## 6. Architekturális terv
 
@@ -62,7 +62,6 @@ Ubuntu szerver. TCP kapcsolaton keresztül a kliens kapcsolódik a szerverhez.
 ### 6.2 Adatbázis rendszer
 Szerver-Kliens alkalmazás, a szerver gondoskodik a biztonságos adatbázis kapcsolatról.
 A szerver MySQL adatbázist használ.
-
 
 ## 7. Adatbázis terv
 
@@ -85,14 +84,14 @@ Adatbázis terv részletei
 
 ### Kliens
  * Java ablakos program.
- * A felhasználói felület - Java GUI alkalmazás Swift segítségével.
+ * A felhasználói/adminisztrációs felület - Java GUI alkalmazás Swift segítségével.
  * A programok objektum orientált programozási paradigma használatával.
- * Alkalmazott Tervezési minták : (work in progress)
+ * Alkalmazott Tervezési minták : Facade
 
 ### Szerver
  * Java konzolos program.
  * A programok objektum orientált programozási paradigma használatával.
- * Alkalmazott Tervezési minták : (work in progress)
+ * Alkalmazott Tervezési minták : Facade, Observer
 
 
 ## 9. Tesztterv
@@ -120,7 +119,6 @@ Szoftver telepítési terv: Szükségünk van egy számítógépre, amelyen el t
 
 ### Szerver
 Szoftver telepítési terv: A szervernek futtatnia kell java alkalmazásokat, mysql adatbázist.
-
 
 ## 11. Karbantartási terv
 
