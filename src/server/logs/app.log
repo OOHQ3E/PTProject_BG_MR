@@ -2,3 +2,755 @@
 2022-05-16T21:03:18Z - Server started
 2022-05-16T21:04:42Z - Server started
 2022-05-16T21:13:24Z - New session started!Thread[Thread-0,5,main]
+2022-05-17T15:05:16Z - Server started
+2022-05-17T15:05:36Z - New client connected
+2022-05-17T15:05:36Z - New session started!
+2022-05-17T15:05:45Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:05:45Z - Session closed
+2022-05-17T15:05:47Z - New client connected
+2022-05-17T15:05:47Z - New session started!
+2022-05-17T15:06:57Z - Server started
+2022-05-17T15:07:04Z - New client connected
+2022-05-17T15:07:04Z - New session started!
+2022-05-17T15:07:13Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:07:13Z - Session closed
+2022-05-17T15:07:35Z - New client connected
+2022-05-17T15:07:35Z - New session started!
+2022-05-17T15:07:46Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:07:46Z - Session closed
+2022-05-17T15:15:48Z - New client connected
+2022-05-17T15:15:48Z - New session started!
+2022-05-17T15:15:53Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:15:53Z - Session closed
+2022-05-17T15:15:57Z - New client connected
+2022-05-17T15:15:57Z - New session started!
+2022-05-17T15:15:59Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:15:59Z - Session closed
+2022-05-17T15:16:12Z - New client connected
+2022-05-17T15:16:12Z - New session started!
+2022-05-17T15:16:23Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:16:23Z - Session closed
+2022-05-17T15:16:27Z - New client connected
+2022-05-17T15:16:27Z - New session started!
+2022-05-17T15:17:37Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:17:37Z - Session closed
+2022-05-17T15:17:40Z - New client connected
+2022-05-17T15:17:40Z - New session started!
+2022-05-17T15:18:37Z - New client connected
+2022-05-17T15:18:37Z - New session started!
+2022-05-17T15:20:43Z - New client connected
+2022-05-17T15:20:43Z - New session started!
+2022-05-17T15:23:08Z - New client connected
+2022-05-17T15:23:08Z - New session started!
+2022-05-17T15:23:48Z - New client connected
+2022-05-17T15:23:48Z - New session started!
+2022-05-17T15:24:20Z - New client connected
+2022-05-17T15:24:20Z - New session started!
+2022-05-17T15:27:21Z - Server started
+2022-05-17T15:27:30Z - New client connected
+2022-05-17T15:27:30Z - New session started!
+2022-05-17T15:28:33Z - Server started
+2022-05-17T15:28:37Z - New client connected
+2022-05-17T15:28:37Z - New session started!
+2022-05-17T15:28:57Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:28:57Z - Session closed
+2022-05-17T15:35:57Z - New client connected
+2022-05-17T15:35:57Z - New session started!
+2022-05-17T15:36:23Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:36:23Z - Session closed
+2022-05-17T15:36:25Z - New client connected
+2022-05-17T15:36:25Z - New session started!
+2022-05-17T15:36:33Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:36:33Z - Session closed
+2022-05-17T15:37:45Z - Server started
+2022-05-17T15:37:58Z - Server started
+2022-05-17T15:38:05Z - New client connected
+2022-05-17T15:38:05Z - New session started!
+2022-05-17T15:38:26Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:38:26Z - Session closed
+2022-05-17T15:39:12Z - New client connected
+2022-05-17T15:39:12Z - New session started!
+2022-05-17T15:39:42Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:39:42Z - Session closed
+2022-05-17T15:44:52Z - New client connected
+2022-05-17T15:44:52Z - New session started!
+2022-05-17T15:45:08Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:45:08Z - Session closed
+2022-05-17T15:45:39Z - New client connected
+2022-05-17T15:45:39Z - New session started!
+2022-05-17T15:46:02Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T15:46:02Z - Session closed
+2022-05-17T15:46:04Z - New client connected
+2022-05-17T15:46:04Z - New session started!
+2022-05-17T16:05:15Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:05:15Z - Session closed
+2022-05-17T16:05:18Z - New client connected
+2022-05-17T16:05:18Z - New session started!
+2022-05-17T16:07:13Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:07:13Z - Session closed
+2022-05-17T16:07:15Z - New client connected
+2022-05-17T16:07:15Z - New session started!
+2022-05-17T16:07:58Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:07:58Z - Session closed
+2022-05-17T16:08:01Z - New client connected
+2022-05-17T16:08:01Z - New session started!
+2022-05-17T16:20:30Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:20:30Z - Session closed
+2022-05-17T16:20:33Z - New client connected
+2022-05-17T16:20:33Z - New session started!
+2022-05-17T16:20:57Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:20:57Z - Session closed
+2022-05-17T16:21:00Z - New client connected
+2022-05-17T16:21:00Z - New session started!
+2022-05-17T16:21:41Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:21:41Z - Session closed
+2022-05-17T16:21:43Z - New client connected
+2022-05-17T16:21:43Z - New session started!
+2022-05-17T16:24:13Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:24:13Z - Session closed
+2022-05-17T16:24:16Z - New client connected
+2022-05-17T16:24:16Z - New session started!
+2022-05-17T16:28:14Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:28:14Z - Session closed
+2022-05-17T16:28:17Z - New client connected
+2022-05-17T16:28:17Z - New session started!
+2022-05-17T16:33:17Z - Server started
+2022-05-17T16:33:27Z - New client connected
+2022-05-17T16:33:27Z - New session started!
+2022-05-17T16:34:46Z - Server started
+2022-05-17T16:35:01Z - New client connected
+2022-05-17T16:35:01Z - New session started!
+2022-05-17T16:37:16Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:37:16Z - Session closed
+2022-05-17T16:37:19Z - New client connected
+2022-05-17T16:37:19Z - New session started!
+2022-05-17T16:38:44Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:38:44Z - Session closed
+2022-05-17T16:38:46Z - New client connected
+2022-05-17T16:38:46Z - New session started!
+2022-05-17T16:39:13Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:39:13Z - Session closed
+2022-05-17T16:39:14Z - New client connected
+2022-05-17T16:39:14Z - New session started!
+2022-05-17T16:39:47Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:39:47Z - Session closed
+2022-05-17T16:39:49Z - New client connected
+2022-05-17T16:39:49Z - New session started!
+2022-05-17T16:40:11Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:40:11Z - Session closed
+2022-05-17T16:42:04Z - New client connected
+2022-05-17T16:42:04Z - New session started!
+2022-05-17T16:42:24Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:42:24Z - Session closed
+2022-05-17T16:42:26Z - New client connected
+2022-05-17T16:42:26Z - New session started!
+2022-05-17T16:42:39Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:42:39Z - Session closed
+2022-05-17T16:43:55Z - New client connected
+2022-05-17T16:43:55Z - New session started!
+2022-05-17T16:44:11Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:44:11Z - Session closed
+2022-05-17T16:46:13Z - New client connected
+2022-05-17T16:46:13Z - New session started!
+2022-05-17T16:46:38Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:46:38Z - Session closed
+2022-05-17T16:46:45Z - New client connected
+2022-05-17T16:46:45Z - New session started!
+2022-05-17T16:53:47Z - New client connected
+2022-05-17T16:53:47Z - New session started!
+2022-05-17T16:55:19Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:55:19Z - Session closed
+2022-05-17T16:55:22Z - New client connected
+2022-05-17T16:55:22Z - New session started!
+2022-05-17T16:55:44Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:55:44Z - Session closed
+2022-05-17T16:56:29Z - Server started
+2022-05-17T16:56:36Z - New client connected
+2022-05-17T16:56:36Z - New session started!
+2022-05-17T16:56:50Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:56:50Z - Session closed
+2022-05-17T16:56:52Z - New client connected
+2022-05-17T16:56:52Z - New session started!
+2022-05-17T16:57:24Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T16:57:24Z - Session closed
+2022-05-17T17:02:18Z - New client connected
+2022-05-17T17:02:18Z - New session started!
+2022-05-17T17:02:30Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T17:02:30Z - Session closed
+2022-05-17T17:02:50Z - New client connected
+2022-05-17T17:02:50Z - New session started!
+2022-05-17T17:03:24Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T17:03:24Z - Session closed
+2022-05-17T17:05:48Z - Server started
+2022-05-17T17:05:55Z - New client connected
+2022-05-17T17:05:55Z - New session started!
+2022-05-17T17:06:36Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T17:06:36Z - Session closed
+2022-05-17T17:06:38Z - New client connected
+2022-05-17T17:06:38Z - New session started!
+2022-05-17T17:07:53Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T17:07:53Z - Session closed
+2022-05-17T17:07:55Z - New client connected
+2022-05-17T17:07:55Z - New session started!
+2022-05-17T17:08:25Z - Error occurred while reading client input
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at ClientConnection.ClientSession.readLine(ClientSession.java:21)
+	at ClientConnection.Connection$ReaderThread.run(Connection.java:34)
+2022-05-17T17:08:25Z - Session closed

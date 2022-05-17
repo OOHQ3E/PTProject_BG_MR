@@ -1,8 +1,11 @@
 package Classes;
 
+import adminWindow.userManagement;
+import loginForm.LoginForm;
 import userWindow.Draw;
 import userWindow.mainwindow;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -53,19 +56,24 @@ public class Connection{
             }
             else if (Objects.equals(data[0], "Message")) {
                 String message = data[1];
-                // üzenet kiíratása
+                LoginForm.showMessage(message);
             }
             else if (Objects.equals(data[0], "Error")) {
                 String error = data[1];
-                // hiba kiíratása
+                LoginForm.showError(error);
             }
             else if (Objects.equals(data[0], "User")) {
                 User u = User.convertStringToUser(line);
-                // valamit ezzel kezdeni idk
+                LoginForm.LoginAttempt(u);
             }
             else {
                 ArrayList<User> users = User.convertStringToUserList(line);
                 if (users != null) {
+                    userManagement.resetCurrentTable();
+                    userManagement.addUserList(users);
+                    for (User u: users) {
+                        System.out.println(u);
+                    }
                     // kiíratni a táblázatba
                 }
             }
@@ -136,8 +144,8 @@ public class Connection{
     public void deleteUser(int id) {
         sendCommand("DeleteUser;"+id);
     }
-    public void updateUser(User user) {
-        sendCommand("Update"+user);
+    public void updateUser(User user, String passwd) {
+        sendCommand("UpdateUser;"+user.getId()+";"+user.getUserName()+";"+passwd+";"+user.getAuthLevel());
     }
     public void showUser(int id) {
         sendCommand("ShowUser;"+id);

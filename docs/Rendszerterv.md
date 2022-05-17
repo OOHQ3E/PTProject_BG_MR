@@ -79,12 +79,6 @@ Adatbázis terv részletei
  * Pozíció y
  * Szín
  * Szerkesztő ID-je
-
-### Log tábla
- * ID
- * Dátum
- * Fontossági szint
- * Esemény leírása
  
 
 ## 8. Implementációs terv

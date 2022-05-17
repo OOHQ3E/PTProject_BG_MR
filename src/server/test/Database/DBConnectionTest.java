@@ -6,11 +6,12 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.AssertJUnit.assertEquals;
 
 class DBConnectionTest {
     @Test
     void dbUsers() {
-        DBConnection dbConnection = new DBConnection("localhost", "progtech", "progtech", "");
+        DBConnection dbConnection = new DBConnection("localhost", "progtech", "root", "");
         String name = "newTestUser";
         String password = "testUserPassword";
         int authLevel = 1;
@@ -48,7 +49,7 @@ class DBConnectionTest {
 
     @Test
     void dbPixel() {
-        DBConnection dbConnection = new DBConnection("localhost", "progtech", "progtech", "");
+        DBConnection dbConnection = new DBConnection("localhost", "progtech", "root", "");
         int width = 15;
 
         dbConnection.ResetPixelCanvas(width);

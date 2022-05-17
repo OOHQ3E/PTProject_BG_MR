@@ -69,5 +69,18 @@ public class Pixel {
                 Integer.parseInt(data[5])
         );
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pixel pixel = (Pixel) o;
+        return x == pixel.x && y == pixel.y && r == pixel.r && g == pixel.g && b == pixel.b;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, r, g, b);
+    }
 }
 

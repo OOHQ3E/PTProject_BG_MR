@@ -54,9 +54,22 @@ public class User {
             return null;
         }
         int count = data.length;
-        for (int i = 1; i < count - 1; i++) {
+        for (int i = 1; i < count; i++) {
             users.add(convertStringToUser(data[i]));
         }
         return users;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && authLevel == user.authLevel && Objects.equals(userName, user.userName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, userName, authLevel);
     }
 }
