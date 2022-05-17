@@ -1,4 +1,4 @@
-# Progrmaozási Technológiák Beadandó
+# Programozási Technológiák Beadandó
 
 Az Eszterházy Károly Katolikus Egyetem, Programozási Technológiák (2021/22. 2.félév) gyakorlatához készült ez a repository.
 
