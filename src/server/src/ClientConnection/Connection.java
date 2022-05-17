@@ -155,7 +155,9 @@ public class Connection{
 
         @Override
         public void Update(String updateString) {
-            connection.sendCommand(updateString);
+            if (currentUser != null) {
+                connection.sendCommand(updateString);
+            }
         }
     }
 
