@@ -38,7 +38,6 @@ public class Connection{
                     }
                 }
                 catch (IOException ex) {
-                    logger.error("Error occurred while reading client input", ex);
                     this.Exiting();
                 }
             }
@@ -86,7 +85,6 @@ public class Connection{
             else if (Objects.equals(data[0], "Logout")) {
                 if (connection.currentUser != null) {
                     connection.currentUser = null;
-                    //connection.sendCommand("Message;Logged out!");
                 }
             }
             else if (Objects.equals(data[0], "ShowUser")) {
@@ -161,12 +159,11 @@ public class Connection{
         }
     }
 
-
     private ReaderThread readerThread;
     private Observer observer;
     private DBConnection dbConnection;
     private User currentUser = null;
-    private Logger logger = LoggerFactory.getLogger("Connection");
+    private final Logger logger = LoggerFactory.getLogger("Connection");
 
     public Connection(ClientSession session, Observer observer, DBConnection dbConnection) {
         readerThread = new ReaderThread(this);

@@ -18,7 +18,6 @@ public class DBConnection {
     public ArrayList<User> GetAllUsers() {
         ArrayList<User> users = new ArrayList<User>();
         try {
-            System.out.println(connectionString);
             Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from users;");
