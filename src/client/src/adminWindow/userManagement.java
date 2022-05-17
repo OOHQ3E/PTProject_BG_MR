@@ -1,5 +1,6 @@
 package adminWindow;
 
+import Classes.Connection;
 import Classes.User;
 
 import javax.swing.*;
@@ -21,9 +22,11 @@ public class userManagement extends JFrame{
     private JButton modifyUserButton;
     private JTextField tf_id;
     private JTable userTable;
+    Connection conn;
 
-    public userManagement(JFrame parent){
+    public userManagement(JFrame parent, Connection connection){
         super();
+        conn = connection;
         createTable();
         setTitle("User management");
         setContentPane(user_mgPanel);
@@ -33,6 +36,7 @@ public class userManagement extends JFrame{
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setVisible(true);
         setUpButtonListeners();
+
     }
     public void setUpButtonListeners(){
         ActionListener buttonListener = new ActionListener() {
@@ -80,7 +84,5 @@ public class userManagement extends JFrame{
 
     //TODO: listing users in the usersTable
     public static userManagement userManagement;
-    public static void main(String[] args) {
-        userManagement = new userManagement(null);
-    }
+
 }

@@ -19,7 +19,18 @@ public class LoginForm extends JFrame{
     private JButton btn_cancel;
     private JPanel loginPanel;
     private static Connection connection;
+    public static void LoginAttempt(User user){
+        mainwindow main = new mainwindow(connection, user);
 
+        lf.dispose();
+    }
+    private static LoginForm lf;
+    public static void showError(String error){
+        lf.showDialogbox(error);
+    }
+    public static void showMessage(String message){
+       lf.showDialogbox(message);
+    }
     public LoginForm(JFrame parent){
         super();
         setTitle("Login");
@@ -29,8 +40,8 @@ public class LoginForm extends JFrame{
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setVisible(true);
-
         setUpButtonListeners();
+        lf = this;
     }
     //giving listeners to the two buttons
     public void setUpButtonListeners(){
@@ -39,15 +50,15 @@ public class LoginForm extends JFrame{
             public void actionPerformed(ActionEvent ae) {
                 Object o = ae.getSource();
                 if (o == btn_login){
-                    //getting the data from text fields
                     String uname = tf_username.getText();
                     String pword = String.valueOf(pf_password.getPassword());
+                    connection.sendLoginRequest(uname,pword);
 
                     //passing this data to this function → return is a user supposedly
-                    loggedinUser = getAuthenticatedUser(uname,pword);
+                    //loggedinUser = getAuthenticatedUser(uname,pword);
 
                     //if the logged in user is a simple user it will open the mainWindow
-                    if (loggedinUser.getAuthLevel() == 0){
+                   /* if (loggedinUser.getAuthLevel() == 0){
                         //JOptionPane.showMessageDialog(loginForm, "you pressed the login button");
                         System.out.println("logged user is " + loggedinUser);
                         //opening the mainwindow
@@ -65,7 +76,7 @@ public class LoginForm extends JFrame{
                     //if there is no information it will show a dialog
                     else{
                         JOptionPane.showMessageDialog(loginForm, "no information given");
-                    }
+                    }*/
                 }
 
                 //pressing the cancel button closes the program
@@ -77,6 +88,9 @@ public class LoginForm extends JFrame{
         //adding the actionlistener function to the buttons
         btn_login.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
+    }
+    private void showDialogbox(String message){
+        JOptionPane.showMessageDialog(loginForm,message);
     }
 
     //initializing a non valid user

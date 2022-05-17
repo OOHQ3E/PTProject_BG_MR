@@ -55,6 +55,10 @@ public class Connection{
         private void interpret(String s) {
             String[] data = s.split(";");
             if (Objects.equals(data[0], "Pixel")) {
+                if (currentUser == null){
+                    connection.sendCommand("Error;You must be logged in to use this feature!");
+                    return;
+                }
                 connection.observer.Update(s);
                 Pixel p = Pixel.convertStringToPixel(s);
                 connection.dbConnection.UpdatePixel(p.getX(), p.getY(), p.getR(), p.getG(), p.getB());
@@ -66,6 +70,10 @@ public class Connection{
                 }
             }
             else if (Objects.equals(data[0], "Login")) {
+                if (data.length < 3 || data[1].equals("") || data[2].equals("")){
+                    connection.sendCommand("Error;Empty field!");
+                    return;
+                }
                 User u = dbConnection.UserExists(data[1], data[2]);
                 connection.currentUser = u;
                 if (u == null) {

@@ -2,6 +2,9 @@ package userWindow;
 
 import Classes.Pixel;
 import Classes.Connection;
+import Classes.User;
+import adminWindow.userManagement;
+import loginForm.LoginForm;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,10 +20,11 @@ public class mainwindow extends JFrame{
     private JSpinner nud_red;
     private JSpinner nud_green;
     private JSpinner nud_blue;
+    private JButton btn_UsrManagement;
     public Draw draw = new Draw();
     private static Connection c;
     public static mainwindow mainWindow;
-    public mainwindow(Connection connection){
+    public mainwindow(Connection connection, User user){
         mainwindow.c = connection;
         mainwindow.mainWindow = this;
         setContentPane(mainIguess);
@@ -32,7 +36,8 @@ public class mainwindow extends JFrame{
         setLayout(new GridLayout(1,1,0,0));
 
         add(draw);
-
+        btn_UsrManagement.setVisible(user.getAuthLevel() >= 3);
+        loggedinUser = user;
         setVisible(true);
         setUpButtonListeners();
         c.getAllPixel();
@@ -41,7 +46,7 @@ public class mainwindow extends JFrame{
         Draw.paletteRedraw();
         repaint();
     }
-
+    private User loggedinUser;
     public void setUpButtonListeners(){
         ActionListener buttonListener = new ActionListener() {
             @Override
@@ -52,11 +57,20 @@ public class mainwindow extends JFrame{
                     c.updatePixel(newPixel);
                 }
                 else if (o == logOutButton){
-                    System.exit(0);
+                    loggedinUser = null;
+                    c.sendLogoutRequest();
+                    LoginForm loginForm = new LoginForm(null);
+                    dispose();
                 }
+                else if(o == btn_UsrManagement){
+                    userManagement usermanagement = new userManagement(null,c);
+                    dispose();
+                }
+
             }
         };
         paintButton.addActionListener(buttonListener);
         logOutButton.addActionListener(buttonListener);
+        btn_UsrManagement.addActionListener(buttonListener);
     }
 }

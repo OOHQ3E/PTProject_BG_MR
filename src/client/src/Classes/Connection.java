@@ -1,8 +1,10 @@
 package Classes;
 
+import loginForm.LoginForm;
 import userWindow.Draw;
 import userWindow.mainwindow;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -53,14 +55,16 @@ public class Connection{
             }
             else if (Objects.equals(data[0], "Message")) {
                 String message = data[1];
-                // üzenet kiíratása
+                LoginForm.showMessage(message);
             }
             else if (Objects.equals(data[0], "Error")) {
                 String error = data[1];
-                // hiba kiíratása
+                LoginForm.showError(error);
             }
             else if (Objects.equals(data[0], "User")) {
                 User u = User.convertStringToUser(line);
+                LoginForm.LoginAttempt(u);
+
                 // valamit ezzel kezdeni idk
             }
             else {
