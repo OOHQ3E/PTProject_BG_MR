@@ -99,18 +99,9 @@ Adatbázis terv részletei
 A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata,
 ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása.
 A teszteléseket a fejlesztői csapat minden tagja elvégzi.
-Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
+Unit tesztek külön komponensekhez.
 
-### 9.1 A tesztelési jegyzőkönyv kitöltésére egy sablon:
-
-* **Tesztelő:** Vezetéknév Keresztnév
-* **Tesztelési fajta** (Unit teszt, funkcionális teszt)
-
-Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
-----------|--------------|---------------|----------|-----------
-például. Teszt #01 | Bejelentkezés | A felhasználó az adatok megadásával sikeresen be tud jelentkezni | A felhasználó sikeresen bejelentkezett | Nem találtam problémát.
-... | ... | ... | ... | ...
-
+(Unit tesztek elérhetőek a kliens és a szoftvernek is a Test mappájukon belül)
 
 ## 10. Telepítési terv
 
