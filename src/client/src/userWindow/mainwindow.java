@@ -53,8 +53,19 @@ public class mainwindow extends JFrame{
             public void actionPerformed(ActionEvent ae) {
                 Object o = ae.getSource();
                 if (o == paintButton){
-                    Pixel newPixel = new Pixel((int) nud_X.getValue(),(int) nud_Y.getValue(),(int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
-                    c.updatePixel(newPixel);
+                    if ((int) nud_X.getValue() >= 0 && (int) nud_X.getValue() < 15 &&
+                        (int)nud_Y.getValue() >= 0 && (int) nud_Y.getValue() < 15 &&
+                        (int)nud_red.getValue() >= 0 && (int) nud_red.getValue() < 256 &&
+                        (int)nud_green.getValue() >= 0 && (int) nud_green.getValue() < 256 &&
+                        (int)nud_blue.getValue() >= 0 && (int) nud_blue.getValue() < 256
+                    ){
+                        Pixel newPixel = new Pixel((int) nud_X.getValue(),(int) nud_Y.getValue(),(int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
+                        c.updatePixel(newPixel);
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(mainWindow, "Invalid Input!");
+                    }
+
                 }
                 else if (o == logOutButton){
                     loggedinUser = null;
