@@ -1,5 +1,8 @@
 package userWindow;
 
+import Classes.Pixel;
+import Classes.Connection;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +18,8 @@ public class mainwindow extends JFrame{
     private JSpinner nud_green;
     private JSpinner nud_blue;
     public Draw draw = new Draw();
+    private static Connection c;
+    public static mainwindow mainWindow;
     public mainwindow(){
         setContentPane(mainIguess);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,10 +28,14 @@ public class mainwindow extends JFrame{
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(new GridLayout(1,1,0,0));
-        add(draw);
-        setVisible(true);
 
+        add(draw);
+
+        setVisible(true);
         setUpButtonListeners();
+    }
+    public void drawSquare(){
+
     }
     public void setUpButtonListeners(){
         ActionListener buttonListener = new ActionListener() {
@@ -34,11 +43,13 @@ public class mainwindow extends JFrame{
             public void actionPerformed(ActionEvent ae) {
                 Object o = ae.getSource();
                 if (o == paintButton){
-                    Draw.pixels[(int) nud_Y.getValue()][(int) nud_X.getValue()]
-                            = new Color((int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
+                    Pixel newPixel = new Pixel((int) nud_X.getValue(),(int) nud_Y.getValue(),(int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
+                    c.updatePixel(newPixel);
+                    //Draw.pixels[(int) nud_Y.getValue()][(int) nud_X.getValue()]
+                    //        = new Color((int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
 
-                    Draw.paletteRedraw();
-                    repaint();
+                    //Draw.paletteRedraw();
+                   // repaint();
                 }
                 else if (o == logOutButton){
                     System.exit(0);
@@ -50,8 +61,10 @@ public class mainwindow extends JFrame{
     }
 
 
-    public static void main(String[] args) {
-        JFrame frame = new mainwindow();
+    public static void main(Connection connection) {
+        c = connection;
+        mainWindow = new mainwindow();
+        JFrame frame = mainWindow;
         frame.setLayout(null);
     }
 }

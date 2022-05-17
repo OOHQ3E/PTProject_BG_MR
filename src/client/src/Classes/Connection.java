@@ -1,5 +1,7 @@
-import Classes.Pixel;
-import Classes.User;
+package Classes;
+
+import userWindow.Draw;
+import userWindow.mainwindow;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ public class Connection{
             while (!stop) {
                 try {
                     String line = session.readLine();
+                    interpret(line);
                     System.out.println(line);
                     if (Objects.equals(line, "EXIT")) {
                         this.Exiting();
@@ -36,13 +39,15 @@ public class Connection{
             catch (IOException ex) {}
             session.close();
             System.out.println("Session closed!");
-            System.out.println("Connection closed!");
+            System.out.println("Classes.Connection closed!");
         }
-        private void intrepret(String line) {
+        private void interpret(String line) {
             String[] data = line.split(";");
             if (Objects.equals(data[0], "Pixel")) {
                 Pixel p = Pixel.convertStringToPixel(line);
-                // pixel frissítése
+                Draw.updateBlock(p);
+                Draw.paletteRedraw();
+                mainwindow.mainWindow.draw.repaint();
 
             }
             else if (Objects.equals(data[0], "Message")) {
@@ -76,6 +81,7 @@ public class Connection{
         readerThread = new ReaderThread(this);
         this.session = session;
         setStop(false);
+
     }
     private final ServerSession session;
 

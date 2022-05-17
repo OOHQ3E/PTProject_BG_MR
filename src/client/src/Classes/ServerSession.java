@@ -1,3 +1,5 @@
+package Classes;
+
 import Classes.Pixel;
 import Classes.User;
 

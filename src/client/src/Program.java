@@ -1,23 +1,17 @@
-import Classes.Pixel;
-import Classes.User;
+import Classes.Config;
+import Classes.Connection;
+import Classes.ServerSession;
 import loginForm.LoginForm;
-import userWindow.mainwindow;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Properties;
 
 public class Program {
     public static void main(String[] args) throws Exception {
-        LoginForm.main(args);
+
         if (Config.loadConfiguration()) {
             ServerSession session = new ServerSession(Config.getIp(), Config.getPort());
             Connection connection = new Connection(session);
             connection.Start();
+            LoginForm.main(args);
             connection.sendLoginRequest("admin", "admin");
-            Thread.sleep(500);
-            connection.sendLogoutRequest();
-            connection.Exit();
         }
     }
 }
