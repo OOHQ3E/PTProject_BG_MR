@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 
 public class Draw extends JPanel {
-    private static int blockSize = 15;
+    public static final int blockSize = 15;
     public static Block[][] blocks = new Block[blockSize][blockSize];
     public static Color[][] pixels = new Color[blockSize][blockSize];
     ArrayList<Pixel> pixelList = new ArrayList<Pixel>();
@@ -20,6 +20,7 @@ public class Draw extends JPanel {
     }
     public static void updateBlock(Pixel point){
         blocks[point.getX()][point.getY()].setColor(new Color(point.getR(),point.getG(),point.getB()));
+        pixels[point.getX()][point.getY()] = new Color(point.getR(),point.getG(),point.getB());
     }
     public static void paletteRedraw(){
         for (int i = 0; i < blocks.length; i++) {

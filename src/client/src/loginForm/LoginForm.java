@@ -1,5 +1,6 @@
 package loginForm;
 
+import Classes.Connection;
 import Classes.User;
 import adminWindow.userManagement;
 import userWindow.Draw;
@@ -17,6 +18,7 @@ public class LoginForm extends JFrame{
     private JButton btn_login;
     private JButton btn_cancel;
     private JPanel loginPanel;
+    private static Connection connection;
 
     public LoginForm(JFrame parent){
         super();
@@ -49,7 +51,7 @@ public class LoginForm extends JFrame{
                         //JOptionPane.showMessageDialog(loginForm, "you pressed the login button");
                         System.out.println("logged user is " + loggedinUser);
                         //opening the mainwindow
-                        mainwindow main = new mainwindow();
+                        mainwindow main = new mainwindow(connection);
                         dispose();
                     }
 
@@ -97,7 +99,8 @@ public class LoginForm extends JFrame{
     }
 
     public static LoginForm loginForm;
-    public static void main(String[] args) {
+    public static void main(Connection connection) {
+        LoginForm.connection = connection;
         loginForm = new LoginForm(null);
     }
 }

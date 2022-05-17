@@ -20,7 +20,9 @@ public class mainwindow extends JFrame{
     public Draw draw = new Draw();
     private static Connection c;
     public static mainwindow mainWindow;
-    public mainwindow(){
+    public mainwindow(Connection connection){
+        mainwindow.c = connection;
+        mainwindow.mainWindow = this;
         setContentPane(mainIguess);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Main Window");
@@ -35,8 +37,10 @@ public class mainwindow extends JFrame{
         setUpButtonListeners();
     }
     public void drawSquare(){
-
+        Draw.paletteRedraw();
+        repaint();
     }
+
     public void setUpButtonListeners(){
         ActionListener buttonListener = new ActionListener() {
             @Override
@@ -45,11 +49,6 @@ public class mainwindow extends JFrame{
                 if (o == paintButton){
                     Pixel newPixel = new Pixel((int) nud_X.getValue(),(int) nud_Y.getValue(),(int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
                     c.updatePixel(newPixel);
-                    //Draw.pixels[(int) nud_Y.getValue()][(int) nud_X.getValue()]
-                    //        = new Color((int)nud_red.getValue(),(int)nud_green.getValue(),(int)nud_blue.getValue());
-
-                    //Draw.paletteRedraw();
-                   // repaint();
                 }
                 else if (o == logOutButton){
                     System.exit(0);
@@ -58,13 +57,5 @@ public class mainwindow extends JFrame{
         };
         paintButton.addActionListener(buttonListener);
         logOutButton.addActionListener(buttonListener);
-    }
-
-
-    public static void main(Connection connection) {
-        c = connection;
-        mainWindow = new mainwindow();
-        JFrame frame = mainWindow;
-        frame.setLayout(null);
     }
 }

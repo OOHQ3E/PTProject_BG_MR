@@ -48,6 +48,7 @@ public class Connection{
                 Draw.updateBlock(p);
                 Draw.paletteRedraw();
                 mainwindow.mainWindow.draw.repaint();
+                mainwindow.mainWindow.drawSquare();
 
             }
             else if (Objects.equals(data[0], "Message")) {
