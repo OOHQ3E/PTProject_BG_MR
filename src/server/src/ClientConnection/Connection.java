@@ -56,13 +56,7 @@ public class Connection{
             String[] data = s.split(";");
             if (Objects.equals(data[0], "Pixel")) {
                 connection.observer.Update(s);
-                Pixel p = new Pixel(
-                        Integer.parseInt(data[1]),
-                        Integer.parseInt(data[2]),
-                        Integer.parseInt(data[3]),
-                        Integer.parseInt(data[4]),
-                        Integer.parseInt(data[5])
-                );
+                Pixel p = Pixel.convertStringToPixel(s);
                 connection.dbConnection.UpdatePixel(p.getX(), p.getY(), p.getR(), p.getG(), p.getB());
             }
             else if (Objects.equals(data[0], "Login")) {
@@ -76,13 +70,15 @@ public class Connection{
                 }
             }
             else if (Objects.equals(data[0], "Logout")) {
-                connection.currentUser = null;
-                connection.sendCommand("Message;Logged out!");
+                if (connection.currentUser != null) {
+                    connection.currentUser = null;
+                    connection.sendCommand("Message;Logged out!");
+                }
             }
             else if (Objects.equals(data[0], "ShowUser")) {
                 if (isAdminLoggedIn()) {
                     User u = connection.dbConnection.GetUser(Integer.parseInt(data[1]));
-                    connection.sendCommand("Show" + u);
+                    connection.sendCommand(u.toString());
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");

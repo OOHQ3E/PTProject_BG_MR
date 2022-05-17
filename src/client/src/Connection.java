@@ -2,6 +2,7 @@ import Classes.Pixel;
 import Classes.User;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Connection{
@@ -37,11 +38,37 @@ public class Connection{
             System.out.println("Session closed!");
             System.out.println("Connection closed!");
         }
+        private void intrepret(String line) {
+            String[] data = line.split(";");
+            if (Objects.equals(data[0], "Pixel")) {
+                Pixel p = Pixel.convertStringToPixel(line);
+                // pixel frissítése
+
+            }
+            else if (Objects.equals(data[0], "Message")) {
+                String message = data[1];
+                // üzenet kiíratása
+            }
+            else if (Objects.equals(data[0], "Error")) {
+                String error = data[1];
+                // hiba kiíratása
+            }
+            else if (Objects.equals(data[0], "User")) {
+                User u = User.convertStringToUser(line);
+                // valamit ezzel kezdeni idk
+            }
+            else {
+                ArrayList<User> users = User.convertStringToUserList(line);
+                if (users != null) {
+                    // kiíratni a táblázatba
+                }
+            }
+        }
+
         public void Exiting() {
             connection.setStop(true);
         }
     }
-
 
     private ReaderThread readerThread;
 
@@ -62,7 +89,6 @@ public class Connection{
     }
 
     private boolean stop;
-
 
     public void Session() {
         System.out.println("Connected and session started!");

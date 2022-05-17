@@ -2,6 +2,7 @@ package Database;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DBConnection {
     private String connectionString;
@@ -92,7 +93,13 @@ public class DBConnection {
         try {
             Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
             Statement stmt = con.createStatement();
-            String query = "insert into users (username, password, auth_level) values (\""+ Username +"\",md5(\"" + Password + "\"), " + AuthLevel + ")";
+            String query = "select count(*) from users where username=\""+Username+"\";";
+            ResultSet rs = stmt.executeQuery(query);
+            if (rs.next() && rs.getInt(1) > 0) {
+                con.close();
+                return false;
+            }
+            query = "insert into users (username, password, auth_level) values (\""+ Username +"\",md5(\"" + Password + "\"), " + AuthLevel + ");";
             stmt.execute(query);
             con.close();
             return true;
@@ -122,9 +129,22 @@ public class DBConnection {
         try {
             Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
             Statement stmt = con.createStatement();
-            String query = "update users set username = \""
-                    +Username+"\", password=md5(\""+Password+"\"), auth_level = "
-                    + AuthLevel + " where id = "+ ID + ";";
+            String query = "select count(*) from users where id != "+ID+" and username = \"" + Username + "\";";
+            ResultSet rs = stmt.executeQuery(query);
+            if (rs.next() && rs.getInt(1) > 0) {
+                con.close();
+                return false;
+            }
+            if (!Objects.equals(Password, "")) {
+                query = "update users set username = \""
+                        + Username + "\", password=md5(\"" + Password + "\"), auth_level = "
+                        + AuthLevel + " where id = " + ID + ";";
+            }
+            else {
+                query = "update users set username = \""
+                        + Username + "\", auth_level = "
+                        + AuthLevel + " where id = " + ID + ";";
+            }
             stmt.execute(query);
             con.close();
             return true;
@@ -138,7 +158,6 @@ public class DBConnection {
     public ArrayList<Pixel> GetAllPixels() {
         ArrayList<Pixel> pixels = new ArrayList<Pixel>();
         try {
-            System.out.println(connectionString);
             Connection con = DriverManager.getConnection(connectionString, DBUserName, DBPassword);
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from pixels;");
