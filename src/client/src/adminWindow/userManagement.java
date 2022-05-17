@@ -1,9 +1,15 @@
 package adminWindow;
 
+import Classes.User;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableColumnModel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class userManagement extends JFrame{
     private JPanel user_mgPanel;
@@ -18,6 +24,7 @@ public class userManagement extends JFrame{
 
     public userManagement(JFrame parent){
         super();
+        createTable();
         setTitle("User management");
         setContentPane(user_mgPanel);
         setMinimumSize(new Dimension(600,500));
@@ -33,7 +40,9 @@ public class userManagement extends JFrame{
             public void actionPerformed(ActionEvent ae) {
                 Object o = ae.getSource();
                 if (o == addUserButton){
-                    //add request
+                    String data[] = {tf_username.getText(),tf_password.getText()};
+                    DefaultTableModel tblModel = (DefaultTableModel)userTable.getModel();
+                    tblModel.addRow(data);
                 }
                 else if (o == deleteUserButton){
                     //delete request
@@ -47,6 +56,27 @@ public class userManagement extends JFrame{
         deleteUserButton.addActionListener(buttonListener);
         modifyUserButton.addActionListener(buttonListener);
     }
+    ArrayList<User> users = new ArrayList<User>();
+    User user1 = new User(1,"testuser1",0);
+
+    private void createTable(){
+        users.add(user1);
+
+        Object[][] data ={
+                {1,"testuser1",0},
+                {2,"testuser2",0},
+                {3,"testuser3",0}
+        };
+
+        userTable.setModel(new DefaultTableModel(
+                data,
+                new String[]{"id", "username", "authority"}
+        ));
+        TableColumnModel colums = userTable.getColumnModel();
+        colums.getColumn(0).setMaxWidth(50);
+        colums.getColumn(1).setMinWidth(100);
+        colums.getColumn(2).setMaxWidth(50);
+    }
 
     //TODO: listing users in the usersTable
     public static userManagement userManagement;
@@ -54,4 +84,3 @@ public class userManagement extends JFrame{
         userManagement = new userManagement(null);
     }
 }
-
