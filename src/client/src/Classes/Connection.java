@@ -1,5 +1,6 @@
 package Classes;
 
+import adminWindow.userManagement;
 import loginForm.LoginForm;
 import userWindow.Draw;
 import userWindow.mainwindow;
@@ -64,12 +65,15 @@ public class Connection{
             else if (Objects.equals(data[0], "User")) {
                 User u = User.convertStringToUser(line);
                 LoginForm.LoginAttempt(u);
-
-                // valamit ezzel kezdeni idk
             }
             else {
                 ArrayList<User> users = User.convertStringToUserList(line);
                 if (users != null) {
+                    userManagement.resetCurrentTable();
+                    userManagement.addUserList(users);
+                    for (User u: users) {
+                        System.out.println(u);
+                    }
                     // kiíratni a táblázatba
                 }
             }
@@ -140,8 +144,8 @@ public class Connection{
     public void deleteUser(int id) {
         sendCommand("DeleteUser;"+id);
     }
-    public void updateUser(User user) {
-        sendCommand("Update"+user);
+    public void updateUser(User user, String passwd) {
+        sendCommand("UpdateUser;"+user.getId()+";"+user.getUserName()+";"+passwd+";"+user.getAuthLevel());
     }
     public void showUser(int id) {
         sendCommand("ShowUser;"+id);

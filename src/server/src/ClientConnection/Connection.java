@@ -86,7 +86,7 @@ public class Connection{
             else if (Objects.equals(data[0], "Logout")) {
                 if (connection.currentUser != null) {
                     connection.currentUser = null;
-                    connection.sendCommand("Message;Logged out!");
+                    //connection.sendCommand("Message;Logged out!");
                 }
             }
             else if (Objects.equals(data[0], "ShowUser")) {
@@ -139,8 +139,14 @@ public class Connection{
             }
             else if (Objects.equals(data[0], "UpdateUser")) {
                 if (isAdminLoggedIn()) {
-                    connection.dbConnection.UpdateUser(Integer.parseInt(data[1]), data[2], data[3], Integer.parseInt(data[4]));
-                    connection.sendCommand("Message;User updated!");
+                    if (data.length == 5){
+                        connection.dbConnection.UpdateUser(Integer.parseInt(data[1]), data[2], data[3], Integer.parseInt(data[4]));
+                        connection.sendCommand("Message;User updated!");
+                    }
+                    else if (data.length == 4){
+                        connection.dbConnection.UpdateUser(Integer.parseInt(data[1]), data[2], "", Integer.parseInt(data[3]));
+                        connection.sendCommand("Message;User updated!");
+                    }
                 }
                 else {
                     connection.sendCommand("Error;You must be an admin to use this feature!");

@@ -63,7 +63,7 @@ public class mainwindow extends JFrame{
                     dispose();
                 }
                 else if(o == btn_UsrManagement){
-                    userManagement usermanagement = new userManagement(null,c);
+                    userManagement usermanagement = new userManagement(null,c,loggedinUser);
                     dispose();
                 }
 

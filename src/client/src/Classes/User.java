@@ -54,7 +54,7 @@ public class User {
             return null;
         }
         int count = data.length;
-        for (int i = 1; i < count - 1; i++) {
+        for (int i = 1; i < count; i++) {
             users.add(convertStringToUser(data[i]));
         }
         return users;
